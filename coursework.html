@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursework</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+            'header'
+            'div'
+            'footer';
+            grid-gap: 1em;
+
+            grid-auto-rows:10% 80% 5%;
+            text-align:center
+        }
+
+            body header {
+            grid-area: header;
+            align-self: center;
+        }
+
+            body div {
+            grid-area: div;
+        }
+
+            body footer {
+            grid-area: footer;
+        }
+
+        @media (max-width:375px), (max-height:667px) {
+
+            body div {
+                margin-top: 20px;
+            }
+            .video {
+                height: 200px;
+                width: 90%;
+            }
+        }
+
+        @media (max-width:1024px), (max-height:1366px) {
+            .video {
+                margin-left: 100px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <main id="swup" class="transition-fade" style=" height: 100vh; background-color:#ff0054;">
+    <br />
+    <header>
+        <h1>
+            My Coursework
+        </h1>
+    </header>
+    <br />
+    <aside>
+        <a href="/index.html">Home</a>
+        <a href="/pages/bio.html">Biography</a>
+        <a href="/pages/education.html">Education</a>
+        <a href="/pages/resume.html">-Resume</a>
+        <a href="/pages/certificates.html">&emsp;-Certificates</a>
+        <a href="/pages/coursework.html">&emsp;-Coursework</a>
+        <a href="/pages/releventSkills.html">Relevent Skills</a>
+        <a href="/pages/jobExperience.html">Job Experience</a>
+        <a href="/pages/other.html">Other</a>
+    </aside>
+
+    <div>
+        <section id="pathfinding">
+            <h2>Pathfinding Algorithm</h2>
+            <video class="video" width="600" height="400" controls>
+                <source src="/videos/pathfinding.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="Q_learning">
+            <h2>Q-Learning Algorithm</h2>
+            <video class="video" width="600" height="400" controls>
+                <source src="/videos/QLearning.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="er_diagram">
+            <h2>ER-diagram for database design</h2>
+            <img class="video" src="/images/er_diagram.jpg" alt="er_diagram" width="600" height="400">
+        </section>
+    </div>
+
+    <footer>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+        <hr>
+        <p>This page was made by Shanlin Hu </p>
+    </footer>
+</main>
+</body>
+</html>

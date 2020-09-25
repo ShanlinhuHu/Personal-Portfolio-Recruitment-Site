@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+
+        body {
+            display: grid;
+            grid-template-areas:
+            'header'
+            'div'
+            'footer';
+            grid-gap: 1em;
+
+            grid-auto-rows:10% 80% 5%;
+            text-align:center;
+        }
+
+            body header {
+            grid-area: header;
+        }
+
+            body div {
+            grid-area: div;
+        }
+
+            body footer {
+            grid-area: footer;
+
+        }
+
+        @media (max-width:375px), (max-height:667px) {
+            body div, body header {
+                margin-top: 20px;
+                width: 70%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main id="swup" class="transition-fade" style="height: 100vh;background-color:#6f2dbd;">
+    <br />
+    <header>
+        <h1>
+            Experiment-1
+        </h1>
+    </header>
+    <br />
+    <aside>
+        <a href="/index.html">Home</a>
+        <a href="/pages/bio.html">Biography</a>
+        <a href="/pages/education.html">Education</a>
+        <a href="/pages/releventSkills.html">Relevent Skills</a>
+        <a href="/pages/jobExperience.html">Job Experience</a>
+        <a href="/pages/other.html">Other</a>
+        <a href="/pages/experiment.html">-Experiment-1</a>
+        <a href="/pages/experiment_2.html">-Experiment-2</a>
+        <a href="/pages/experiment_3.html">-Experiment-3</a>
+    </aside>
+
+    <div>
+        <h2>First Experiment page</h2>
+        <h3>Using i tag</h3>
+        <p>The <i>COVID19</i>, happened on 2020. Not a good timing to go out</p>
+
+        <h3>Using pre tag</h3>
+        <pre>There is two spaces between the word HERE  and  HERE in html file</pre>
+
+        <h3>Using iframe tag(showing homepage)</h3>
+        <iframe src="/index.html" height="200" width="300" title="homepage"></iframe>
+
+        <h3>Using audio tag(summer audio)</h3>
+        <audio controls>
+            <source src="/audio/summer.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+
+        <section>
+            <h3>Using canvas tag</h3>
+            <canvas id="canvas" width="200" height="100">
+                Your browser does not support the HTML canvas tag.</canvas>
+                <script>
+                    var c = document.getElementById("canvas");
+                    var ctx = c.getContext("2d");
+                    ctx.moveTo(0,0);
+                    ctx.lineTo(200,100);
+                    ctx.moveTo(200,0);
+                    ctx.lineTo(0,100);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.arc(100,50,40,0,2*Math.PI);
+                    ctx.stroke();
+                </script> 
+        </section>
+
+        <h3>Using SVG tag</h3>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="30"
+             stroke-width="4" fill="red" />
+        </svg>
+
+        <section id="colgroup">
+            <h3>Using colgroup tag and col tag</h3>
+            <h4>I can use CSS: table.center {margin: 0 auto;} to center the table
+                but that is over max of 3 lines of CSS code </h4>
+            <table>
+                <colgroup>
+                    <col span="3" style="background-color:yellow">
+                </colgroup>
+                <tr>
+                    <th>Important ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>Cool HTML</td>
+                    <td>infinite</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <footer>
+        <hr>
+        <p>This page was made by Shanlin Hu </p>
+    </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+            'header'
+            'div'
+            'footer';
+            grid-gap: 1em;
+            
+            grid-auto-rows:10% 80% 10%;
+            text-align:center
+        }
+
+            body header {
+            grid-area: header;
+            align-self: center;
+        }
+
+            div {
+            grid-area: div;
+        }
+
+            body footer {
+            grid-area: footer;
+        }
+
+        @media (max-width:375px), (max-height:667px) {
+            body div {
+                margin-top: 20px;
+            }
+            .img {
+                height: auto;
+                width: 90%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <main id="swup" class="transition-fade" style="margin-top: -10%; background-color:#9e0059; height: 100vh;">
+    <br />
+    <header>
+        <h1>
+            My Certificate
+        </h1>
+    </header>
+    <br />
+    <aside>
+        <a href="/index.html">Home</a>
+        <a href="/pages/bio.html">Biography</a>
+        <a href="/pages/education.html">Education</a>
+        <a href="/pages/resume.html">-Resume</a>
+        <a href="/pages/certificates.html">&emsp;-Certificates</a>
+        <a href="/pages/coursework.html">&emsp;-Coursework</a>
+        <a href="/pages/releventSkills.html">Relevent Skills</a>
+        <a href="/pages/jobExperience.html">Job Experience</a>
+        <a href="/pages/other.html">Other</a>
+    </aside>
+
+    <div>
+        <section id="certificates">
+            <h2>All certificate from high school</h2>
+            <img class="img" src="/images/certificates_total.jpg" alt="certificates_total" width="450" height="500">
+        </section>
+
+        <section id="highSchool_c">
+            <h2>High school certificate</h2>
+            <img class="img" src="/images/highschool_c.jpg" alt="highSchool_c" width="450" height="200">
+        </section>
+
+        <section id="Japanese">
+            <h2>Japanesee certificate</h2>
+            <img class="img" src="/images/Japanese.jpg" alt="Japanese" width="450" height="200">
+        </section>
+    </div>
+    
+    <footer>
+        <br /><br /><br />
+        <hr>
+        <p>This page was made by Shanlin Hu </p>
+    </footer>
+</main>
+</body>
+</html>

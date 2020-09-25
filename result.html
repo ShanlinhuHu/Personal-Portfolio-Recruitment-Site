@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+            'header'
+            'main'
+            'footer';
+            grid-gap: 1em;
+            background-color:white;
+            grid-auto-rows:10% 80% 5%;
+            text-align:center
+        }
+
+            body header {
+            grid-area: header;
+            align-self: center;
+        }
+
+            body main {
+            grid-area: main;
+        }
+
+            body footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+
+    <br />
+    <header>
+        <h1>
+            Result Page
+        </h1>
+    </header>
+    <br />
+
+    <main>
+        <h2>Thank you submitting the form.</h2>
+        <a href="/pages/experiment_2.html">Back to experiment_2</a>
+    </main>
+
+    <footer>
+        <hr>
+        <p>This page was made by Shanlin Hu </p>
+    </footer>
+</body>
+</html>

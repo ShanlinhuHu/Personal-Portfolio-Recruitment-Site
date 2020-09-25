@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+            'header'
+            'div'
+            'footer';
+            grid-gap: 1em;
+           
+            grid-auto-rows:10% 80% 10%;
+            text-align:center
+        }
+
+        body header {
+            grid-area: header;
+            align-self: center;
+        }
+
+        body div {
+            grid-area: div;
+        }
+
+        body footer {
+            grid-area: footer;
+        }
+
+        img {
+            border: 5px solid black;
+        }
+
+
+        @media (max-width:375px), (max-height:667px) {
+            body div {
+                margin-top: 60px;
+            }
+            #resume {
+                height: auto;
+                width: 90%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <main id="swup" class="transition-fade" style=" background-color:#390099;  height: 100vh;">
+
+    <br />
+    <header>
+        <h1>My Resume</h1>
+    </header>
+    <br />
+    <aside>
+        <a href="/index.html">Home</a>
+        <a href="/pages/bio.html">Biography</a>
+        <a href="/pages/education.html">Education</a>
+        <a href="/pages/resume.html">-Resume</a>
+        <a href="/pages/certificates.html">&emsp;-Certificates</a>
+        <a href="/pages/coursework.html">&emsp;-Coursework</a>
+        <a href="/pages/releventSkills.html">Relevent Skills</a>
+        <a href="/pages/jobExperience.html">Job Experience</a>
+        <a href="/pages/other.html">Other</a>
+    </aside>
+
+    <div>
+            <h2>Click on the image to download resume</h2>
+            <a href="/images/resume.jpg" download>
+                <img id="resume" src="/images/resume.jpg" alt="resume" width="500" height="700">
+            </a>
+        </div>
+    
+    <footer>
+        <hr>
+        <p>This page was made by Shanlin Hu </p>
+    </footer><
+</main>
+</body>
+</html>

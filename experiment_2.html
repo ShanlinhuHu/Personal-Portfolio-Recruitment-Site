@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment_2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+            'header'
+            'div'
+            'footer';
+            grid-gap: 1em;
+            grid-auto-rows:10% 80% 5%;
+            text-align:center
+        }
+
+        body header {
+            grid-area: header;
+            align-self: center;
+        }
+
+        body madivin {
+            grid-area: div;
+        }
+
+        body footer {
+            grid-area: footer;
+        }
+
+        ol {
+            list-style-position: inside;
+        }
+
+        @media (max-width:375px), (max-height:667px) {
+            body div, body header {
+                margin-top: 50px;
+                width: 80%;
+            }
+        }
+        @media (max-width:1024px) and (max-height:1366px) {
+            body div {
+                margin-left: 100px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <main id="swup" class="transition-fade" style="height: 100vh;background-color:#a663cc;">
+    <br />
+    <header>
+        <h1>
+            Experiment-2
+        </h1>
+    </header>
+    <br />
+    <aside>
+        <a href="/index.html">Home</a>
+        <a href="/pages/bio.html">Biography</a>
+        <a href="/pages/education.html">Education</a>
+        <a href="/pages/releventSkills.html">Relevent Skills</a>
+        <a href="/pages/jobExperience.html">Job Experience</a>
+        <a href="/pages/other.html">Other</a>
+        <a href="/pages/experiment.html">-Experiment-1</a>
+        <a href="/pages/experiment_2.html">-Experiment-2</a>
+        <a href="/pages/experiment_3.html">-Experiment-3</a>
+    </aside>
+
+    <div>
+        <h2>Second Experiment page</h2>
+        <h3>Using ol tag</h3>
+        <ol>
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+        </ol>
+
+        <section>
+            <h3>Using optgroup tag, form tag, label tag, button tag, input tag, <br />
+                fieldset tag, div tag, textarea tag, datalist tag, and legend tag
+            </h3>
+            <form action="result.html" method="GET">
+                <fieldset>
+                    <legend>Picture, Text, List:</legend>
+                    <div id="option">
+                        <label for="pic">Choose a picture:</label>
+                        <select name="name" id="pic">
+                        <optgroup label="pretty picture">
+                            <option value="pic1">pic1</option>
+                            <option value="pic2">pic2</option>
+                        </optgroup>
+                        <optgroup label="Ugly picture">
+                            <option value="pic3">pic3</option>
+                            <option value="pic4">pic4</option>
+                        </optgroup>
+                        </select>
+                        <button type="submit">Submit</button>
+                    </div>
+                    <div id="textarea">
+                        <textarea id="text" name="text" rows="4" cols="50">Type something here
+                        </textarea>
+                        <br><br>
+                        <input type="submit" value="Submit">
+                    </div>
+                    <br />
+                    <div id="datalist">
+                        <label for="class">Choose your class from the list:</label>
+                        <input list="classes" name="class" id="class">
+                        <datalist id="classes">
+                            <option value="CSE100">
+                            <option value="CSE101">
+                            <option value="CSE127">
+                            <option value="CSE134">
+                            <option value="CSE150">
+                        </datalist>
+                        <input type="submit">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <br /><br />
+
+        <h3>Using details tag and summary tag</h3>
+        <details>
+            <summary>click the arrow for more information</summary>
+            <p>Nothing here</p>
+          </details>
+
+          <section id="templat">
+            <h3>Using template</h3>
+            <button onclick="showContent()">Show hidden content</button>
+            <template>
+                <h4>test</h4>
+                <img src="/images/test.png" width="500" height="300">
+            </template>
+            <script>
+            function showContent() {
+                var temp = document.getElementsByTagName("template")[0];
+                var clon = temp.content.cloneNode(true);
+                document.body.appendChild(clon);
+            }
+            </script>
+          </section>
+    </div>
+    <footer>
+        <hr>
+        <p>This page was made by Shanlin Hu </p>
+    </footer>
+</main>
+</body>
+</html>

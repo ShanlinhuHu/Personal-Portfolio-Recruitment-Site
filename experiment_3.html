@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment_3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+            'header'
+            'div'
+            'footer';
+            grid-gap: 1em;
+            grid-auto-rows:10% 80% 5%;
+            text-align:center
+        }
+
+            body header {
+            grid-area: header;
+            align-self: center;
+        }
+
+            body div {
+            grid-area: div;
+        }
+
+            body footer {
+            grid-area: footer;
+        }
+        @media (max-width:375px), (max-height:667px) {
+            body div, body header {
+                margin-top: 80px;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main id="swup" class="transition-fade" style="height: 100vh; background-color:#b298dc;">
+    <br />
+    <header>
+        <h1>
+            Experiment-3
+        </h1>
+    </header>
+    <br />
+    <aside>
+        <a href="/index.html">Home</a>
+        <a href="/pages/bio.html">Biography</a>
+        <a href="/pages/education.html">Education</a>
+        <a href="/pages/releventSkills.html">Relevent Skills</a>
+        <a href="/pages/jobExperience.html">Job Experience</a>
+        <a href="/pages/other.html">Other</a>
+        <a href="/pages/experiment.html">-Experiment-1</a>
+        <a href="/pages/experiment_2.html">-Experiment-2</a>
+        <a href="/pages/experiment_3.html">-Experiment-3</a>
+    </aside>
+
+    <div>
+        <h2>Third Experiment page</h2>
+        
+        <section id="picture">
+            <h3>Using picture tag</h3>
+            <p>Resize the browser window to load different images.</p>
+            <picture>
+                <source media="(min-width:1000px)" srcset="/images/test1000.jpg">
+                <source media="(min-width:500px)" srcset="/images/test500.jpg">
+                <source media="(min-width:400px)" srcset="/images/test400.jpg">
+                <img src="/images/test200.jpg" alt="test" style="width:auto;">
+            </picture>
+        </section>
+
+    </div>
+    </div>
+    <footer>
+        <hr>
+        <p>This page was made by Shanlin Hu </p>
+    </footer>
+</main>
+</body>
+</html>
